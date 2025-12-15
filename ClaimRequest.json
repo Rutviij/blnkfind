@@ -1,0 +1,46 @@
+{
+  "name": "ClaimRequest",
+  "type": "object",
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "description": "ID of the item being claimed"
+    },
+    "item_name": {
+      "type": "string",
+      "description": "Name of the item being claimed"
+    },
+    "claimant_name": {
+      "type": "string",
+      "description": "Name of person claiming the item"
+    },
+    "claimant_email": {
+      "type": "string",
+      "description": "Email of person claiming the item"
+    },
+    "claimant_phone": {
+      "type": "string",
+      "description": "Phone number of claimant"
+    },
+    "proof_of_ownership": {
+      "type": "string",
+      "description": "Description proving ownership"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending",
+      "description": "Status of the claim"
+    }
+  },
+  "required": [
+    "item_id",
+    "claimant_name",
+    "claimant_email",
+    "proof_of_ownership"
+  ]
+}
