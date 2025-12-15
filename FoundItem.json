@@ -1,0 +1,68 @@
+{
+  "name": "FoundItem",
+  "type": "object",
+  "properties": {
+    "item_name": {
+      "type": "string",
+      "description": "Name of the found item"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Electronics",
+        "Clothing",
+        "Books",
+        "Accessories",
+        "Sports Equipment",
+        "Keys",
+        "ID/Cards",
+        "Other"
+      ],
+      "description": "Category of the item"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the item"
+    },
+    "location_found": {
+      "type": "string",
+      "description": "Where the item was found"
+    },
+    "date_found": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when item was found"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Photo of the found item"
+    },
+    "finder_name": {
+      "type": "string",
+      "description": "Name of person who found the item"
+    },
+    "finder_email": {
+      "type": "string",
+      "description": "Email of person who found the item"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "claimed",
+        "rejected"
+      ],
+      "default": "pending",
+      "description": "Status of the item posting"
+    }
+  },
+  "required": [
+    "item_name",
+    "category",
+    "location_found",
+    "date_found",
+    "finder_name",
+    "finder_email"
+  ]
+}
